@@ -2,9 +2,9 @@
   "name": "react-native-web",
   "version": "0.0.49",
   "description": "React Native for Web",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "files": [
-    "dist"
+    "src"
   ],
   "scripts": {
     "build": "del ./dist && mkdir dist && babel src -d dist --ignore **/__tests__",
@@ -13,7 +13,7 @@
     "deploy:examples": "git checkout gh-pages && rm -rf ./storybook && mv dist-examples storybook && git add -A && git commit -m \"Storybook deploy\" && git push origin gh-pages && git checkout -",
     "examples": "start-storybook -p 9001 -c ./examples/.storybook --dont-track",
     "lint": "eslint src",
-    "prepublish": "npm run build && npm run build:umd",
+    "prepublish": "npm run build:umd",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },
